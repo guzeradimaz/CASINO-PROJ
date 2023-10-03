@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CASINO-PROJ/static/css/main.716a1a36.css",
+    "main.js": "/CASINO-PROJ/static/js/main.34f06454.js",
+    "index.html": "/CASINO-PROJ/index.html",
+    "main.716a1a36.css.map": "/CASINO-PROJ/static/css/main.716a1a36.css.map",
+    "main.34f06454.js.map": "/CASINO-PROJ/static/js/main.34f06454.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.716a1a36.css",
+    "static/js/main.34f06454.js"
+  ]
+}
