@@ -9,7 +9,7 @@ import { Home } from './screens/Home/Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/CASINO-PROJ/",
     element: <Home/>,
   },
 ]);
