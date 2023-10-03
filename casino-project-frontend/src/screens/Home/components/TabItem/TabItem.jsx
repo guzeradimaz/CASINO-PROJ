@@ -8,12 +8,13 @@ export const TabItem = ({ image }) => {
         minWidth: 220,
         height: 110,
         cursor: "pointer",
-        backgroundSize: "100%",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundColor: 'green',
         marginLeft: 30,
-        borderRadius: 13
+        borderRadius: 13,
+        
       }}
     />
   );

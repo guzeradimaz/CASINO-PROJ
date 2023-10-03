@@ -5,8 +5,9 @@ export const TabList = () => {
   const casinos = [
     {
       id: "id-97gg9g979hhvkvg7",
+      path: "/CASINO-PROJ/roulette",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://images.theconversation.com/files/147757/original/image-20161128-22748-1couruj.jpg?ixlib=rb-1.1.0&rect=0%2C252%2C5616%2C2723&q=45&auto=format&w=1356&h=668&fit=crop",
     },
     {
       id: "id-97gg9gkkvhkvh79g7",
@@ -52,11 +53,13 @@ export const TabList = () => {
         display: "flex",
         alignItems: "center",
         overflowX: "scroll",
-        boxShadow: '0 0 10px #552b8c'
+        boxShadow: "0 0 10px #552b8c",
       }}
     >
       {casinos.map((i) => (
-        <TabItem key={i.id} image={i.image} />
+        <a href={i.path}>
+          <TabItem key={i.id} image={i.image} />
+        </a>
       ))}
     </div>
   );
