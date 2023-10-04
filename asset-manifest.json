@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CASINO-PROJ/static/css/main.66978f22.css",
-    "main.js": "/CASINO-PROJ/static/js/main.3e34152c.js",
+    "main.css": "/CASINO-PROJ/static/css/main.3367c782.css",
+    "main.js": "/CASINO-PROJ/static/js/main.3de3b1ff.js",
     "index.html": "/CASINO-PROJ/index.html",
-    "main.66978f22.css.map": "/CASINO-PROJ/static/css/main.66978f22.css.map",
-    "main.3e34152c.js.map": "/CASINO-PROJ/static/js/main.3e34152c.js.map"
+    "main.3367c782.css.map": "/CASINO-PROJ/static/css/main.3367c782.css.map",
+    "main.3de3b1ff.js.map": "/CASINO-PROJ/static/js/main.3de3b1ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.66978f22.css",
-    "static/js/main.3e34152c.js"
+    "static/css/main.3367c782.css",
+    "static/js/main.3de3b1ff.js"
   ]
 }
