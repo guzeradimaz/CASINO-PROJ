@@ -1,0 +1,17 @@
+.btn-roulette-spin {
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-size: 32px;
+  color: #F3C620;
+  background-color: red;
+  border: none;
+  border-radius: 13px;
+  padding: 20px 80px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.btn-roulette-spin:hover {
+  transition: 0.3s ease;
+  background-color: #016D29;
+  letter-spacing: 2.5px;
+}
