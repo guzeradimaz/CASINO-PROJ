@@ -1,5 +1,6 @@
 import React from "react";
 import { TabList } from "./components/TabList/TabList";
+import { Header } from "../../components/Header/Header";
 
 export const Home = () => {
   return (
@@ -8,9 +9,9 @@ export const Home = () => {
         width: "100vw",
         height: "100vh",
         backgroundColor: "rgb(17,17,17)",
-        paddingTop: 60,
       }}
     >
+      <Header />
       <TabList />
     </div>
   );

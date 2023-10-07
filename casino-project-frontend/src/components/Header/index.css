@@ -1,0 +1,17 @@
+.button-header {
+  width: 200px;
+  font-size: 24px;
+  background: rgb(85, 43, 140);
+  border: none;
+  border-radius: 11px;
+  padding: 10px 0;
+  color: #fff;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.button-header:hover{
+  color: rgb(85, 43, 140);
+  transition: all .3s ease;
+  background: #fff;
+}
