@@ -12,37 +12,37 @@ export const TabList = () => {
     {
       id: "id-97gg9gkkvhkvh79g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://store-images.s-microsoft.com/image/apps.64054.14429595829912742.a63cb29a-e94f-436a-b821-b5c5ed61bf78.b704ef15-5de1-4ac4-8b9c-74019268f77f?mode=scale&q=90&h=1080&w=1920",
     },
     {
       id: "id-97gg9gkhkvh979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://wazdan.com/wp-content/uploads/MagicFruits_icon_600x450_webp90.webp",
     },
     {
       id: "id-97gg9f9f7g979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://www.cqf.su/img/in-construct.png",
     },
     {
       id: "id-97gg979fg979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://www.cqf.su/img/in-construct.png",
     },
     {
       id: "id-97ggiufo9g979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://www.cqf.su/img/in-construct.png",
     },
     {
       id: "id-99uf97gg9g979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://www.cqf.su/img/in-construct.png",
     },
     {
       id: "id-9708gfkgg9g979g7",
       image:
-        "https://cdn-v2.gamzix.com/coin-win-hold-the-spin/v1.1.34/resources/preloader/mobile/preloader_bg_1080p.jpg?version=1.1.34",
+        "https://www.cqf.su/img/in-construct.png",
     },
   ];
   return (

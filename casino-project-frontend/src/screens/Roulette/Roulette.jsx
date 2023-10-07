@@ -57,13 +57,13 @@ const spinDuration = 1.0;
 export const Roulette = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
-  const [prizes, setPrizes] = useState([1, 1, 1, 1, 1, 1, 11, 123,123123,123123,123123,123123,123123,123123,123123,123,2,2,2,2,2,2,2,2,2]);
+  const [prizes, setPrizes] = useState([19,0,6,8,14,9,6]);
 
   const handleSpinClick = () => {
     if (!mustSpin) {
       const newPrizeNumber = Math.floor(Math.random() * data.length);
       setPrizeNumber(newPrizeNumber);
-      addNewPrizeToStory(newPrizeNumber);
+      addNewPrizeToStory(data[newPrizeNumber].option);
       setMustSpin(true);
     }
   };
