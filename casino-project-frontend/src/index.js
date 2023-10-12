@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Home } from './screens/Home/Home';
 import { Roulette } from './screens/Roulette/Roulette';
+import { SlotMachine } from './screens/SlotMachine/SlotMachine';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/CASINO-PROJ/roulette",
     element: <Roulette/>,
+  },
+  {
+    path: "/CASINO-PROJ/slots",
+    element: <SlotMachine/>,
   },
 ]);
 

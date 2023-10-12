@@ -55,6 +55,7 @@ const textDistance = 80;
 const spinDuration = 1.0;
 
 export const Roulette = () => {
+  
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [prizes, setPrizes] = useState([19,0,6,8,14,9,6]);
@@ -91,6 +92,8 @@ export const Roulette = () => {
           alignItems: "center",
           display: "flex",
           paddingLeft: 30,
+          paddingRight: 30,
+          justifyContent:'space-between'
         }}
       >
         <p
@@ -104,6 +107,7 @@ export const Roulette = () => {
         >
           Roulette
         </p>
+        <a href="/CASINO-PROJ" style={{color:'#fff'}}>Home</a>
       </div>
       <div
         style={{

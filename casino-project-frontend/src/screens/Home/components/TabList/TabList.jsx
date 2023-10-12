@@ -11,6 +11,7 @@ export const TabList = () => {
     },
     {
       id: "id-97gg9gkkvhkvh79g7",
+      path: "/CASINO-PROJ/slots",
       image:
         "https://store-images.s-microsoft.com/image/apps.64054.14429595829912742.a63cb29a-e94f-436a-b821-b5c5ed61bf78.b704ef15-5de1-4ac4-8b9c-74019268f77f?mode=scale&q=90&h=1080&w=1920",
     },
