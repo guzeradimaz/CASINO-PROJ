@@ -1,32 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { Home } from './screens/Home/Home';
-import { Roulette } from './screens/Roulette/Roulette';
-import { SlotMachine } from './screens/SlotMachine/SlotMachine';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { Routes, HashRouter as Router, Route } from "react-router-dom";
+import { Home } from "./screens/Home/Home";
+import { Roulette } from "./screens/Roulette/Roulette";
+import { SlotMachine } from "./screens/SlotMachine/SlotMachine";
 
-const router = createHashRouter([
-  {
-    path: "/CASINO-PROJ/",
-    element: <Home/>,
-  },
-  {
-    path: "/CASINO-PROJ/roulette",
-    element: <Roulette/>,
-  },
-  {
-    path: "/CASINO-PROJ/slots",
-    element: <SlotMachine/>,
-  },
-]);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router basename="/">
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/roulette" element={<Roulette/>} />
+        <Route path="/slots" element={<SlotMachine/>} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );

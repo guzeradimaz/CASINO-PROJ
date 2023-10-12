@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import "./index.css";
 
@@ -107,7 +107,7 @@ export const Roulette = () => {
         >
           Roulette
         </p>
-        <a href="/CASINO-PROJ" style={{color:'#fff'}}>Home</a>
+        <a href="/" style={{color:'#fff'}}>Home</a>
       </div>
       <div
         style={{

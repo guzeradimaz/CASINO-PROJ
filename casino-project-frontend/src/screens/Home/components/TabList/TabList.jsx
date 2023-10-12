@@ -1,17 +1,18 @@
 import React from "react";
 import { TabItem } from "../TabItem/TabItem";
+import { Link } from "react-router-dom";
 
 export const TabList = () => {
   const casinos = [
     {
       id: "id-97gg9g979hhvkvg7",
-      path: "/CASINO-PROJ/roulette",
+      path: "/roulette",
       image:
         "https://images.theconversation.com/files/147757/original/image-20161128-22748-1couruj.jpg?ixlib=rb-1.1.0&rect=0%2C252%2C5616%2C2723&q=45&auto=format&w=1356&h=668&fit=crop",
     },
     {
       id: "id-97gg9gkkvhkvh79g7",
-      path: "/CASINO-PROJ/slots",
+      path: "/slots",
       image:
         "https://store-images.s-microsoft.com/image/apps.64054.14429595829912742.a63cb29a-e94f-436a-b821-b5c5ed61bf78.b704ef15-5de1-4ac4-8b9c-74019268f77f?mode=scale&q=90&h=1080&w=1920",
     },
@@ -58,9 +59,9 @@ export const TabList = () => {
       }}
     >
       {casinos.map((i) => (
-        <a href={i.path}>
+        <Link key={i.id} to={i.path}>
           <TabItem key={i.id} image={i.image} />
-        </a>
+        </Link>
       ))}
     </div>
   );
