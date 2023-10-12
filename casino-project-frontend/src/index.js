@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import { Home } from './screens/Home/Home';
 import { Roulette } from './screens/Roulette/Roulette';
 import { SlotMachine } from './screens/SlotMachine/SlotMachine';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/CASINO-PROJ/",
     element: <Home/>,
