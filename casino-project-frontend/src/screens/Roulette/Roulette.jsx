@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import "./index.css";
+import { RouletteBets } from "./components/RouletteBets/RouletteBets";
 
 const data = [
   { option: "0", style: { textColor: "#fff", backgroundColor: "#016D29" } },
@@ -42,6 +43,157 @@ const data = [
   { option: "26", style: { textColor: "#fff", backgroundColor: "black" } },
 ];
 
+const rouletteBets = [
+  {
+    title: "1",
+    coef: 36,
+  },
+  {
+    title: "2",
+    coef: 36,
+  },
+  {
+    title: "3",
+    coef: 36,
+  },
+  {
+    title: "4",
+    coef: 36,
+  },
+  {
+    title: "5",
+    coef: 36,
+  },
+  {
+    title: "6",
+    coef: 36,
+  },
+  {
+    title: "7",
+    coef: 36,
+  },
+  {
+    title: "8",
+    coef: 36,
+  },
+  {
+    title: "9",
+    coef: 36,
+  },
+  {
+    title: "10",
+    coef: 36,
+  },
+  {
+    title: "11",
+    coef: 36,
+  },
+  {
+    title: "12",
+    coef: 36,
+  },
+  {
+    title: "13",
+    coef: 36,
+  },
+  {
+    title: "14",
+    coef: 36,
+  },
+  {
+    title: "15",
+    coef: 36,
+  },
+  {
+    title: "16",
+    coef: 36,
+  },
+  {
+    title: "17",
+    coef: 36,
+  },
+  {
+    title: "18",
+    coef: 36,
+  },
+  {
+    title: "19",
+    coef: 36,
+  },
+  {
+    title: "20",
+    coef: 36,
+  },
+  {
+    title: "21",
+    coef: 36,
+  },
+  {
+    title: "22",
+    coef: 36,
+  },
+  {
+    title: "23",
+    coef: 36,
+  },
+  {
+    title: "24",
+    coef: 36,
+  },
+  {
+    title: "25",
+    coef: 36,
+  },
+  {
+    title: "26",
+    coef: 36,
+  },
+  {
+    title: "27",
+    coef: 36,
+  },
+  {
+    title: "28",
+    coef: 36,
+  },
+  {
+    title: "29",
+    coef: 36,
+  },
+  {
+    title: "30",
+    coef: 36,
+  },
+  {
+    title: "31",
+    coef: 36,
+  },
+  {
+    title: "32",
+    coef: 36,
+  },
+  {
+    title: "33",
+    coef: 36,
+  },
+  {
+    title: "34",
+    coef: 36,
+  },
+  {
+    title: "35",
+    coef: 36,
+  },
+  {
+    title: "36",
+    coef: 36,
+  },
+  {
+    title: "0",
+    coef: 36,
+  },
+];
+
 const outerBorderColor = "#F3C620";
 const outerBorderWidth = 1;
 const innerBorderColor = "#000";
@@ -55,10 +207,9 @@ const textDistance = 80;
 const spinDuration = 1.0;
 
 export const Roulette = () => {
-  
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
-  const [prizes, setPrizes] = useState([19,0,6,8,14,9,6]);
+  const [prizes, setPrizes] = useState([19, 0, 6, 8, 14, 9, 6]);
 
   const handleSpinClick = () => {
     if (!mustSpin) {
@@ -70,9 +221,7 @@ export const Roulette = () => {
   };
 
   const addNewPrizeToStory = (newPrizeNumber) => {
-    // setTimeout(() => {
     setPrizes((prev) => [newPrizeNumber, ...prev]);
-    // }, 4000);
   };
 
   return (
@@ -93,7 +242,7 @@ export const Roulette = () => {
           display: "flex",
           paddingLeft: 30,
           paddingRight: 30,
-          justifyContent:'space-between'
+          justifyContent: "space-between",
         }}
       >
         <p
@@ -107,7 +256,9 @@ export const Roulette = () => {
         >
           Roulette
         </p>
-        <a href="/" style={{color:'#fff'}}>Home</a>
+        <a href="/" style={{ color: "#fff" }}>
+          Home
+        </a>
       </div>
       <div
         style={{
@@ -130,7 +281,7 @@ export const Roulette = () => {
               fontSize: 24,
               marginLeft: 30,
               transition: "all 0.3s ease",
-              fontWeight:'bold'
+              fontWeight: "bold",
             }}
           >
             {i}
@@ -171,6 +322,8 @@ export const Roulette = () => {
         <button className="btn-roulette-spin" onClick={handleSpinClick}>
           SPIN
         </button>
+        <RouletteBets bets={rouletteBets}/>
+        
       </div>
     </div>
   );
