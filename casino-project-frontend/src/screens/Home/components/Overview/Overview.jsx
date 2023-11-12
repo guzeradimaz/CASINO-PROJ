@@ -60,6 +60,7 @@ export const Overview = () => {
               maxWidth: 300,
               borderRadius: 12,
               boxShadow: "0 0 5px #552b8c",
+              marginRight: 10
             }}
           />
           <div style={{ maxWidth: "70%" }}>

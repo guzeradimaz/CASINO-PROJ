@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import "./index.css";
 import { RouletteBets } from "./components/RouletteBets/RouletteBets";
-
+import { Header } from "../../components/Header/Header";
+import { BetBtn } from "./components/BetBtn/BetBtn";
+import { BetInput } from "./components/BetInput/BetInput";
 const data = [
   { option: "0", style: { textColor: "#fff", backgroundColor: "#016D29" } },
   { option: "32", style: { textColor: "#fff", backgroundColor: "#E0080B" } },
@@ -44,154 +46,43 @@ const data = [
 ];
 
 const rouletteBets = [
-  {
-    title: "1",
-    coef: 36,
-  },
-  {
-    title: "2",
-    coef: 36,
-  },
-  {
-    title: "3",
-    coef: 36,
-  },
-  {
-    title: "4",
-    coef: 36,
-  },
-  {
-    title: "5",
-    coef: 36,
-  },
-  {
-    title: "6",
-    coef: 36,
-  },
-  {
-    title: "7",
-    coef: 36,
-  },
-  {
-    title: "8",
-    coef: 36,
-  },
-  {
-    title: "9",
-    coef: 36,
-  },
-  {
-    title: "10",
-    coef: 36,
-  },
-  {
-    title: "11",
-    coef: 36,
-  },
-  {
-    title: "12",
-    coef: 36,
-  },
-  {
-    title: "13",
-    coef: 36,
-  },
-  {
-    title: "14",
-    coef: 36,
-  },
-  {
-    title: "15",
-    coef: 36,
-  },
-  {
-    title: "16",
-    coef: 36,
-  },
-  {
-    title: "17",
-    coef: 36,
-  },
-  {
-    title: "18",
-    coef: 36,
-  },
-  {
-    title: "19",
-    coef: 36,
-  },
-  {
-    title: "20",
-    coef: 36,
-  },
-  {
-    title: "21",
-    coef: 36,
-  },
-  {
-    title: "22",
-    coef: 36,
-  },
-  {
-    title: "23",
-    coef: 36,
-  },
-  {
-    title: "24",
-    coef: 36,
-  },
-  {
-    title: "25",
-    coef: 36,
-  },
-  {
-    title: "26",
-    coef: 36,
-  },
-  {
-    title: "27",
-    coef: 36,
-  },
-  {
-    title: "28",
-    coef: 36,
-  },
-  {
-    title: "29",
-    coef: 36,
-  },
-  {
-    title: "30",
-    coef: 36,
-  },
-  {
-    title: "31",
-    coef: 36,
-  },
-  {
-    title: "32",
-    coef: 36,
-  },
-  {
-    title: "33",
-    coef: 36,
-  },
-  {
-    title: "34",
-    coef: 36,
-  },
-  {
-    title: "35",
-    coef: 36,
-  },
-  {
-    title: "36",
-    coef: 36,
-  },
-  {
-    title: "0",
-    coef: 36,
-  },
+  { title: "1", coef: 36, color: "#E0080B" },
+  { title: "2", coef: 36, color: "black" },
+  { title: "3", coef: 36, color: "#E0080B" },
+  { title: "4", coef: 36, color: "black" },
+  { title: "5", coef: 36, color: "#E0080B" },
+  { title: "6", coef: 36, color: "black" },
+  { title: "7", coef: 36, color: "#E0080B" },
+  { title: "8", coef: 36, color: "black" },
+  { title: "9", coef: 36, color: "#E0080B" },
+  { title: "10", coef: 36, color: "black" },
+  { title: "11", coef: 36, color: "#E0080B" },
+  { title: "12", coef: 36, color: "black" },
+  { title: "13", coef: 36, color: "#E0080B" },
+  { title: "14", coef: 36, color: "black" },
+  { title: "15", coef: 36, color: "#E0080B" },
+  { title: "16", coef: 36, color: "black" },
+  { title: "17", coef: 36, color: "#E0080B" },
+  { title: "18", coef: 36, color: "black" },
+  { title: "19", coef: 36, color: "#E0080B" },
+  { title: "20", coef: 36, color: "black" },
+  { title: "21", coef: 36, color: "#E0080B" },
+  { title: "22", coef: 36, color: "black" },
+  { title: "23", coef: 36, color: "#E0080B" },
+  { title: "24", coef: 36, color: "black" },
+  { title: "25", coef: 36, color: "#E0080B" },
+  { title: "26", coef: 36, color: "black" },
+  { title: "27", coef: 36, color: "#E0080B" },
+  { title: "28", coef: 36, color: "black" },
+  { title: "29", coef: 36, color: "#E0080B" },
+  { title: "30", coef: 36, color: "black" },
+  { title: "31", coef: 36, color: "#E0080B" },
+  { title: "32", coef: 36, color: "black" },
+  { title: "33", coef: 36, color: "#E0080B" },
+  { title: "34", coef: 36, color: "black" },
+  { title: "35", coef: 36, color: "#E0080B" },
+  { title: "36", coef: 36, color: "black" },
+  { title: "0", coef: 36, color: "green" },
 ];
 
 const outerBorderColor = "#F3C620";
@@ -210,11 +101,16 @@ export const Roulette = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [prizes, setPrizes] = useState([19, 0, 6, 8, 14, 9, 6]);
+  const [currentBet, setCurrentBet] = useState(null);
+  const [currentBetColor, setCurrentBetColor] = useState(null);
+
+  const [balance, setBalance] = useState(1000);
 
   const handleSpinClick = () => {
     if (!mustSpin) {
       const newPrizeNumber = Math.floor(Math.random() * data.length);
       setPrizeNumber(newPrizeNumber);
+      findPrize(newPrizeNumber);
       addNewPrizeToStory(data[newPrizeNumber].option);
       setMustSpin(true);
     }
@@ -222,6 +118,20 @@ export const Roulette = () => {
 
   const addNewPrizeToStory = (newPrizeNumber) => {
     setPrizes((prev) => [newPrizeNumber, ...prev]);
+  };
+
+  const handleIncrease = (amount) => {
+    setBalance((prevBalance) => prevBalance - amount);
+  };
+
+  const handleDecrease = (amount) => {
+    setBalance((prevBalance) => prevBalance - amount);
+  };
+
+  const findPrize = (number) => {
+    const item = data.filter((i) => i.option === number.toString());
+    const isWinColor = currentBetColor === item[0].style.backgroundColor;
+    const isWinNumber = currentBet == item[0].option;
   };
 
   return (
@@ -233,6 +143,7 @@ export const Roulette = () => {
         paddingBottom: 100,
       }}
     >
+      <Header />
       <div
         style={{
           width: "100%",
@@ -322,8 +233,39 @@ export const Roulette = () => {
         <button className="btn-roulette-spin" onClick={handleSpinClick}>
           SPIN
         </button>
-        <RouletteBets bets={rouletteBets}/>
-        
+        <BetInput onIncrease={handleIncrease} onDecrease={handleDecrease} betCoefficient={balance}/>
+        <div style={{ flexDirection: "row", alignItems: "center" }}>
+          <BetBtn
+            color={"#E0080B"}
+            text={"red"}
+            currentBetColor={currentBetColor}
+            onPress={() => {
+              setCurrentBetColor("#E0080B");
+            }}
+          />
+          <BetBtn
+            color={"black"}
+            text={"black"}
+            currentBetColor={currentBetColor}
+            onPress={() => {
+              setCurrentBetColor("black");
+            }}
+          />
+          <BetBtn
+            color={"orange"}
+            text={"clear"}
+            currentBetColor={"red"}
+            onPress={() => {
+              setCurrentBetColor(null);
+              setCurrentBet(null);
+            }}
+          />
+        </div>
+        <RouletteBets
+          bets={rouletteBets}
+          setCurrentBet={setCurrentBet}
+          currentBet={currentBet}
+        />
       </div>
     </div>
   );
