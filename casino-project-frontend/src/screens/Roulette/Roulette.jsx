@@ -5,6 +5,7 @@ import { RouletteBets } from "./components/RouletteBets/RouletteBets";
 import { Header } from "../../components/Header/Header";
 import { BetBtn } from "./components/BetBtn/BetBtn";
 import { BetInput } from "./components/BetInput/BetInput";
+import { ArrowBackLine } from "../../components/ArrowBackLine/ArrowBackLine";
 const data = [
   { option: "0", style: { textColor: "#fff", backgroundColor: "#016D29" } },
   { option: "32", style: { textColor: "#fff", backgroundColor: "#E0080B" } },
@@ -144,33 +145,7 @@ export const Roulette = () => {
       }}
     >
       <Header />
-      <div
-        style={{
-          width: "100%",
-          height: 100,
-          boxShadow: "0 0 5px #552b8c",
-          alignItems: "center",
-          display: "flex",
-          paddingLeft: 30,
-          paddingRight: 30,
-          justifyContent: "space-between",
-        }}
-      >
-        <p
-          style={{
-            fontSize: 42,
-            color: "#552b8c",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            letterSpacing: 1,
-          }}
-        >
-          Roulette
-        </p>
-        <a href="/" style={{ color: "#fff" }}>
-          Home
-        </a>
-      </div>
+      <ArrowBackLine/>
       <div
         style={{
           width: "100%",

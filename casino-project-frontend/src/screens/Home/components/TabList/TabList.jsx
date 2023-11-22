@@ -20,6 +20,7 @@ export const TabList = () => {
       id: "id-97gg9gkhkvh979g7",
       image:
         "https://wazdan.com/wp-content/uploads/MagicFruits_icon_600x450_webp90.webp",
+      path:'/slotsseven'
     },
     {
       id: "id-97gg9f9f7g979g7",
