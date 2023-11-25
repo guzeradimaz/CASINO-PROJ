@@ -57,7 +57,7 @@ export const Header = () => {
         >
           <p style={{ color: "#fff", fontSize: 24 }}>Balance</p>
           <p style={{ color: "gold", fontSize: 24 }}>$ 999.99</p>
-          <button className="button-header">Вход</button>
+          <button className="button-header">Выйти</button>
         </div>
       </div>
     </div>

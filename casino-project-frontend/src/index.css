@@ -4,8 +4,5 @@
   padding: 0;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-}
-.bhdLno{
-  max-width: 600px !important;
-  max-height: 600px !important;
+  background-color: rgb(17,17,17);
 }
