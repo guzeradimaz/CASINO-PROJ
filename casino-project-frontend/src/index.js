@@ -9,21 +9,21 @@ import {SlotMachineSeven} from "./screens/SlotMachineSeven/SlotMachineSeven";
 import {Login} from "./screens/Login/Login";
 import {store} from './app/store'
 import {Provider} from 'react-redux'
+import {NoPage} from "./screens/NoPage/NoPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 
 root.render(
     <React.StrictMode>
         <Provider store={store}>
             <Router basename="/">
                 <Routes>
-                    <Route index element={<Login/>}/>
+                    <Route path="/" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/roulette" element={<Roulette/>}/>
                     <Route path="/slots" element={<SlotMachine/>}/>
                     <Route path="/slotsseven" element={<SlotMachineSeven/>}/>
-                    <Route path="*" element={<NoPage />} />
+                    <Route path="*" element={<NoPage/>}/>
                 </Routes>
             </Router>
         </Provider>
