@@ -35,7 +35,7 @@ export const Infos = () => {
     <div
       style={{
         width: "100%",
-        backgroundColor: "#000",
+        backgroundColor: "rgb(17,17,17)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

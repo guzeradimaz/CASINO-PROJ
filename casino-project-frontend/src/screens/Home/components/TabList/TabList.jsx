@@ -20,43 +20,19 @@ export const TabList = () => {
       id: "id-97gg9gkhkvh979g7",
       image:
         "https://wazdan.com/wp-content/uploads/MagicFruits_icon_600x450_webp90.webp",
-      path:'/slotsseven'
-    },
-    {
-      id: "id-97gg9f9f7g979g7",
-      image:
-        "https://www.cqf.su/img/in-construct.png",
-    },
-    {
-      id: "id-97gg979fg979g7",
-      image:
-        "https://www.cqf.su/img/in-construct.png",
-    },
-    {
-      id: "id-97ggiufo9g979g7",
-      image:
-        "https://www.cqf.su/img/in-construct.png",
-    },
-    {
-      id: "id-99uf97gg9g979g7",
-      image:
-        "https://www.cqf.su/img/in-construct.png",
-    },
-    {
-      id: "id-9708gfkgg9g979g7",
-      image:
-        "https://www.cqf.su/img/in-construct.png",
+      path: "/slotsseven",
     },
   ];
   return (
     <div
       style={{
         width: "100%",
-        height: 200,
+        height: 250,
         display: "flex",
         alignItems: "center",
         overflowX: "scroll",
         boxShadow: "0 0 10px #552b8c",
+        justifyContent: "center",
       }}
     >
       {casinos.map((i) => (

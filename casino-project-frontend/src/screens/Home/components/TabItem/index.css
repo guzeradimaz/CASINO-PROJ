@@ -1,0 +1,9 @@
+.tab-item-game:hover{
+  transform: scale(1.2);
+  transition: .3s ease;
+  box-shadow: 0 0 20px #552b8c;
+}
+
+.tab-item-game{
+  transition: .3s ease;
+}
