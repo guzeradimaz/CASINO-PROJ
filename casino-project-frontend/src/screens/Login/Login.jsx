@@ -19,7 +19,8 @@ export const Login = () => {
                 displayName: user.displayName,
                 email: user.email,
                 photo: user.photoURL,
-                id: user.uid
+                id: user.uid,
+                balance: 1000
             }
 
             dispatch(setUser(newUser))

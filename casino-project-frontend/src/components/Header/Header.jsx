@@ -2,12 +2,14 @@ import React from "react";
 import Back from "./assets/banner.png";
 import "./index.css";
 import {useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setUser} from "../../app/features/userSlice";
 
 export const Header = () => {
     const navigate = useNavigate()
+    const balance = useSelector(state => state.user.user.balance)
     const dispatch = useDispatch()
+
 
     const logout = () => {
         dispatch(setUser(null))
@@ -68,7 +70,7 @@ export const Header = () => {
                     }}
                 >
                     <p style={{color: "#fff", fontSize: 24}}>Balance</p>
-                    <p style={{color: "gold", fontSize: 24}}>$ 999.99</p>
+                    <p style={{color: "gold", fontSize: 24}}>$ {balance}</p>
                     <button className="button-header" onClick={logout}>Выйти</button>
                 </div>
             </div>

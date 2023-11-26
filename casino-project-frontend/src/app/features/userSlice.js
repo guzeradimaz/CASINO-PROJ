@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 
 const UserInit = {
     user: null
@@ -10,10 +10,13 @@ export const userSlice = createSlice({
     reducers: {
         setUser: (state, action) => {
             state.user = action.payload
+        },
+        changeBalance: (state, action) => {
+            state.user.balance += action.payload
         }
     }
 })
 
-export const { setUser } = userSlice.actions
+export const {setUser, changeBalance} = userSlice.actions
 export const selectUser = (state) => state.user
 export default userSlice.reducer
