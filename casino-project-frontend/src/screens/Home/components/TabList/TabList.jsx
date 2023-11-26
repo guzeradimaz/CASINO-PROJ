@@ -33,6 +33,7 @@ export const TabList = () => {
         overflowX: "scroll",
         boxShadow: "0 0 10px #552b8c",
         justifyContent: "center",
+        backgroundColor: 'rgb(17,17,17)'
       }}
     >
       {casinos.map((i) => (
