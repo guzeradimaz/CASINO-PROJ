@@ -7,7 +7,7 @@ import {setUser} from "../../app/features/userSlice";
 
 export const Header = () => {
     const navigate = useNavigate()
-    const balance = useSelector(state => state.user.user.balance)
+    const balance = useSelector(state => state.user?.user?.balance)
     const dispatch = useDispatch()
 
 
