@@ -19,7 +19,9 @@ export const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div style={{
+            backgroundColor: 'rgb(17,17,17)'
+        }}>
             <Header/>
             <TabList/>
             <Overview/>
