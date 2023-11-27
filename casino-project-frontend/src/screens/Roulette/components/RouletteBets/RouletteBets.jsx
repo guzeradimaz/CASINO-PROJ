@@ -1,8 +1,9 @@
 import React from "react";
 
-const Bet = ({ item, setCurrentBet, currentBet }) => {
+const Bet = ({ item, setCurrentBet, currentBet, disabled }) => {
   return (
     <button
+      disabled={disabled}
       onClick={() => setCurrentBet(item.title)}
       style={{
         border: "1px solid #fff",
@@ -21,7 +22,7 @@ const Bet = ({ item, setCurrentBet, currentBet }) => {
     </button>
   );
 };
-export const RouletteBets = ({ bets, setCurrentBet, currentBet }) => {
+export const RouletteBets = ({ bets, setCurrentBet, currentBet, disabled }) => {
   return (
     <div
       style={{
@@ -36,7 +37,12 @@ export const RouletteBets = ({ bets, setCurrentBet, currentBet }) => {
     >
       {bets.map((i) => {
         return (
-          <Bet item={i} setCurrentBet={setCurrentBet} currentBet={currentBet} />
+          <Bet
+            disabled={disabled}
+            item={i}
+            setCurrentBet={setCurrentBet}
+            currentBet={currentBet}
+          />
         );
       })}
     </div>

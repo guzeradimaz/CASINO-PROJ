@@ -1,12 +1,13 @@
 import React from "react";
 
-export const BetBtn = ({ color, onPress, text, currentBetColor }) => {
+export const BetBtn = ({ color, onPress, text, currentBetColor, disabled }) => {
   return (
     <button
+      disabled={disabled}
       className="betBtn"
       onClick={onPress}
       style={{
-        backgroundColor: color === currentBetColor ? 'green' : color,
+        backgroundColor: color === currentBetColor ? "green" : color,
         color: "#fff",
         fontSize: 18,
         textTransform: "uppercase",
@@ -17,7 +18,7 @@ export const BetBtn = ({ color, onPress, text, currentBetColor }) => {
         paddingRight: 20,
         paddingTop: 10,
         paddingBottom: 10,
-        margin: 10
+        margin: 10,
       }}
     >
       {text}
