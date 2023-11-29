@@ -5,3 +5,9 @@
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
+
+.caption {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}

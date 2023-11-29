@@ -10,6 +10,7 @@ import {Login} from "./screens/Login/Login";
 import {store} from './app/store'
 import {Provider} from 'react-redux'
 import {NoPage} from "./screens/NoPage/NoPage";
+import {Balance} from "./screens/Balance/Balance";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -23,6 +24,7 @@ root.render(
                     <Route path="/roulette" element={<Roulette/>}/>
                     <Route path="/slots" element={<SlotMachine/>}/>
                     <Route path="/slotsseven" element={<SlotMachineSeven/>}/>
+                    <Route path="/balance" element={<Balance/>}/>
                     <Route path="*" element={<NoPage/>}/>
                 </Routes>
             </HashRouter>

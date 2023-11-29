@@ -1,0 +1,23 @@
+.balance-wrapper {
+    height: 100vh;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credit-cards {
+    width: 350px;
+    height: 150px;
+    margin-top: 50px;
+    border-radius: 40px;
+    border-width: 0;
+}
+
+.credit-cards:hover {
+    border-radius: 50px;
+    cursor: pointer;
+    transition: border-radius 0.1s ease;
+
+
+}

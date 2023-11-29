@@ -1,8 +1,6 @@
-import "./NoPage.css"
-
 export const NoPage = () => {
     return (
-        <div className={"caption"}>
+        <div>
             Упс.., такой страницы нет((
         </div>
     )

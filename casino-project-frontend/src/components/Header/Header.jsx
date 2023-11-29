@@ -1,7 +1,7 @@
 import React from "react";
 import Back from "./assets/banner.png";
 import "./index.css";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {setUser} from "../../app/features/userSlice";
 
@@ -71,7 +71,9 @@ export const Header = () => {
                 >
                     <p style={{color: "#fff", fontSize: 24}}>Balance</p>
                     <p style={{color: "gold", fontSize: 24}}>$ {balance}</p>
+                    <Link to={'/balance'}><button className="button-header">Пополнить баланс</button></Link>
                     <button className="button-header" onClick={logout}>Выйти</button>
+
                 </div>
             </div>
         </div>
