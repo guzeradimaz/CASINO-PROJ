@@ -1,6 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {signInWithGooglePopup} from "../../utils/firebase";
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import "./Login.css";
 import {useDispatch} from "react-redux";
 import {setUser} from "../../app/features/userSlice";
@@ -15,12 +16,22 @@ export const Login = () => {
         console.log(response);
         if (response?.user) {
             const user = response.user
-            const newUser = {
+
+            const userRef = doc(getFirestore(), 'users', user.uid)
+            const userDoc = await getDoc(userRef)
+
+            let newUser = {
                 displayName: user.displayName,
                 email: user.email,
                 photo: user.photoURL,
                 id: user.uid,
                 balance: 1000
+            }
+
+            if (userDoc.exists()) {
+                newUser = userDoc.data()
+            } else {
+                await setDoc(userRef, newUser)
             }
 
             dispatch(setUser(newUser))
