@@ -161,7 +161,7 @@ export const Roulette = () => {
         dispatch(changeBalance(+num));
       }
       setDisabled(false);
-    }, 3000);
+    }, 4000);
   };
 
   return (

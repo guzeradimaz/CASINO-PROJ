@@ -74,7 +74,7 @@ export const Header = () => {
         >
           <p style={{ color: "#fff", fontSize: 24 }}>Balance</p>
           <p style={{ color: "gold", fontSize: 24 }}>$ {balance?.toFixed(0)}</p>
-          <Link to={'/balance'}><button className="button-header">Пополнить баланс</button></Link>
+          <Link to={'/balance'}><button className="button-header" style={{width: 250, marginLeft: 20, marginRight: 20}}>Пополнить баланс</button></Link>
                     <button className="button-header" onClick={logout}>
             Выйти
           </button>
