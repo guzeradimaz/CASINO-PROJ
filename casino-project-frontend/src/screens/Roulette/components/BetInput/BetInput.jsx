@@ -1,19 +1,10 @@
 import React from "react";
 
 export const BetInput = ({
-  betCoefficient,
+  currentBet,
   onIncrease,
   onDecrease,
-  balance,
 }) => {
-  const handleIncrease = () => {
-    onIncrease(-10);
-  };
-
-  const handleDecrease = () => {
-    onDecrease(10);
-  };
-
   return (
     <div style={{ marginTop: 30, marginBottom: 20 }}>
       <div
@@ -36,7 +27,7 @@ export const BetInput = ({
             justifyContent: "center",
             display: "flex",
           }}
-          onClick={handleDecrease}
+          onClick={onDecrease}
         >
           -
         </button>
@@ -48,7 +39,7 @@ export const BetInput = ({
             marginRight: 20,
           }}
         >
-          Bet: {betCoefficient}
+          Bet: {currentBet}
         </span>
         <button
           style={{
@@ -63,7 +54,7 @@ export const BetInput = ({
             justifyContent: "center",
             display: "flex",
           }}
-          onClick={handleIncrease}
+          onClick={onIncrease}
         >
           +
         </button>
