@@ -15,7 +15,7 @@ export const SlotMachine = () => {
     const [realBet, setRealBet] = useState();
     const [jackpot, setJackpot] = useState(0);
     const dispatch = useDispatch()
-    const balance = useSelector(state => state.user.user.balance)
+    const balance = useSelector(state => state.user?.user?.balance)
 
     useEffect(() => {
         win();
