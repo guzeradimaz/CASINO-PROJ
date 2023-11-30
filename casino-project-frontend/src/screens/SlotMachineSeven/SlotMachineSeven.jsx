@@ -4,6 +4,7 @@ import {Header} from "../../components/Header/Header";
 import {ArrowBackLine} from "../../components/ArrowBackLine/ArrowBackLine";
 import {useDispatch, useSelector} from "react-redux";
 import {changeBalance} from "../../app/features/userSlice";
+import useStorageUserChecker from "../../hooks/useStorageUserChecker";
 
 export const SlotMachineSeven = () => {
     const [spin, setSpin] = useState(false);
@@ -16,6 +17,8 @@ export const SlotMachineSeven = () => {
     const [jackpot, setJackpot] = useState(0);
     const dispatch = useDispatch()
     const balance = useSelector(state => state.user?.user?.balance)
+
+    useStorageUserChecker();
 
     useEffect(() => {
         win();
