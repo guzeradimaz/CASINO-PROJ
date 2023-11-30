@@ -123,8 +123,11 @@ export const Roulette = () => {
     setBet((balance / 10).toFixed(0));
   }, [balance]);
 
-    const handleSpinClick = () => {
-      if (bet == 0 || bet === null || bet === undefined || (!currentBet && !currentBetColor)) {
+  const handleSpinClick = () => {
+    console.log("====================================");
+    console.log(bet);
+    console.log("====================================");
+    if (bet == 0 || bet === null || bet === undefined) {
       alert("Select a bet");
       return null;
     }
@@ -151,11 +154,11 @@ export const Roulette = () => {
   };
 
   const findPrize = (number) => {
+    setDisabled(false);
     const item = data.filter((i) => i.option === number.toString());
     const isWinColor = currentBetColor === item[0].style.backgroundColor;
     const isWinNumber = currentBet == item[0].option;
     setTimeout(() => {
-      setMustSpin(false);
       addNewPrizeToStory(data[number].option);
       setIsWin({ number: isWinNumber, color: isWinColor });
       setModalVisible(!modalVisible);
@@ -168,7 +171,7 @@ export const Roulette = () => {
         const num = bet * 36;
         dispatch(changeBalance(+num));
       }
-    }, 9000);
+    }, 3000);
   };
 
   return (
@@ -176,6 +179,7 @@ export const Roulette = () => {
       style={{
         width: "100vw",
         backgroundColor: "rgb(17,17,17)",
+        paddingTop: 60,
         paddingBottom: 100,
       }}
     >
@@ -242,7 +246,7 @@ export const Roulette = () => {
           perpendicularText
           textDistance={textDistance}
           onStopSpinning={() => {
-            setDisabled(false);
+            setMustSpin(false);
           }}
         />
         <button

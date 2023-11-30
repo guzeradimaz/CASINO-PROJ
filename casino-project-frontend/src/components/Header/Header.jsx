@@ -29,13 +29,13 @@ export const Header = () => {
         position: "sticky",
         top: 0,
         backgroundColor: "rgb(17,17,17)",
-        zIndex: 100,
+        zIndex: 1000,
       }}
     >
       <div
         style={{
-          backgroundImage: `url(${Back})`,
-          height: 100,
+          backgroundImage: `url(https://image.cnbcfm.com/api/v1/image/106901699-1624478603272Resorts-World-Las-Vegas---Casino---Credit-Megan-Blair-jpg?v=1624478654&w=1600&h=900)`,
+          height: 150,
           width: "100%",
           backgroundSize: "cover",
           backgroundPosition: "center",
