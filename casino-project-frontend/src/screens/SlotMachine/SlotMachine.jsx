@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeBalance} from '../../app/features/userSlice'
 import useStorageUserChecker from "../../hooks/useStorageUserChecker";
 
-export const SlotMachine = () => {
+export const SlotMachine = ({item1, item2, item3, item4}) => {
     const [spin, setSpin] = useState(false);
     const [ring1, setRing1] = useState();
     const [ring2, setRing2] = useState();
@@ -29,55 +29,55 @@ export const SlotMachine = () => {
         if (!spin) {
             return (
                 <>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
                 </>
             );
-        } else if (spin && ring1 == undefined) {
+        } else if (spin && ring1 === undefined) {
             return (
                 <>
-                    <div className="ringMoving">🍓</div>
-                    <div className="ringMoving">🍇</div>
-                    <div className="ringMoving">🍊</div>
-                    <div className="ringMoving">🥭</div>
+                    <div className="ringMoving">{item1}</div>
+                    <div className="ringMoving">{item2}</div>
+                    <div className="ringMoving">{item3}</div>
+                    <div className="ringMoving">{item4}</div>
                 </>
             );
         } else if (ring1 >= 1 && ring1 <= 50) {
             return (
                 <>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
                 </>
             );
         } else if (ring1 > 50 && ring1 <= 75) {
             return (
                 <>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
                 </>
             );
         } else if (ring1 > 75 && ring1 <= 95) {
             return (
                 <>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
                 </>
             );
         } else if (ring1 > 95 && ring1 <= 100) {
             return (
                 <>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
                 </>
             );
         }
@@ -87,55 +87,55 @@ export const SlotMachine = () => {
         if (!spin) {
             return (
                 <>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
                 </>
             );
         } else if (spin && ring2 == undefined) {
             return (
                 <>
-                    <div className="ringMoving">🍓</div>
-                    <div className="ringMoving">🍇</div>
-                    <div className="ringMoving">🍊</div>
-                    <div className="ringMoving">🥭</div>
+                    <div className="ringMoving">{item1}</div>
+                    <div className="ringMoving">{item2}</div>
+                    <div className="ringMoving">{item3}</div>
+                    <div className="ringMoving">{item4}</div>
                 </>
             );
         } else if (ring2 >= 1 && ring2 <= 50) {
             return (
                 <>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
                 </>
             );
         } else if (ring2 > 50 && ring2 <= 75) {
             return (
                 <>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
                 </>
             );
         } else if (ring2 > 75 && ring2 <= 95) {
             return (
                 <>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
                 </>
             );
         } else if (ring2 > 95 && ring2 <= 100) {
             return (
                 <>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
                 </>
             );
         }
@@ -145,57 +145,57 @@ export const SlotMachine = () => {
         if (!spin) {
             return (
                 <>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
                 </>
             );
         } else if (spin && ring3 == undefined) {
             return (
                 <>
-                    <div className="ringMoving">🍓</div>
-                    <div className="ringMoving">🍇</div>
-                    <div className="ringMoving">🍊</div>
+                    <div className="ringMoving">{item1}</div>
+                    <div className="ringMoving">{item2}</div>
+                    <div className="ringMoving">{item3}</div>
                     <div className="ringMoving">🍋</div>
                     <div className="ringMoving">🍍</div>
-                    <div className="ringMoving">🥭</div>
+                    <div className="ringMoving">{item4}</div>
                 </>
             );
         } else if (ring3 >= 1 && ring3 <= 50) {
             return (
                 <>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
                 </>
             );
         } else if (ring3 > 50 && ring3 <= 75) {
             return (
                 <>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
                 </>
             );
         } else if (ring3 > 75 && ring3 <= 95) {
             return (
                 <>
-                    <div className="ringEnd">🍊</div>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
+                    <div className="ringEnd">{item3}</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
                 </>
             );
         } else if (ring3 > 95 && ring3 <= 100) {
             return (
                 <>
-                    <div className="ringEnd">🥭</div>
-                    <div className="ringEnd">🍓</div>
-                    <div className="ringEnd">🍇</div>
-                    <div className="ringEnd">🍊</div>
+                    <div className="ringEnd">{item4}</div>
+                    <div className="ringEnd">{item1}</div>
+                    <div className="ringEnd">{item2}</div>
+                    <div className="ringEnd">{item3}</div>
                 </>
             );
         }
@@ -314,20 +314,20 @@ export const SlotMachine = () => {
     function premio() {
         if (price === 1 && ring3 > 1) {
             return (
-                <p className="priceInd">{"🍇 X15 You've won " + realBet * 15 + "€!"}</p>
+                <p className="priceInd">{item2 + " X15 You've won " + realBet * 15 + "€!"}</p>
             );
         } else if (price === 2 && ring3 > 1) {
             return (
-                <p className="priceInd">{"🍊 X20 You've won " + realBet * 20 + "€!"}</p>
+                <p className="priceInd">{item3 + " X20 You've won " + realBet * 20 + "€!"}</p>
             );
         } else if (price === 3 && ring3 > 1) {
             return (
-                <p className="priceInd">{"🥭 X25 You've won " + realBet * 25 + "€!"}</p>
+                <p className="priceInd">{item4 + " X25 You've won " + realBet * 25 + "€!"}</p>
             );
         } else if (price === 4 && ring3 > 1) {
             return (
                 <p className="priceInd">
-                    {"🍓 Jackpot! You've won: " + jackpot + "€!"}
+                    {item1 + " Jackpot! You've won: " + jackpot + "€!"}
                 </p>
             );
         } else if (price === 0 && ring3 > 1) {

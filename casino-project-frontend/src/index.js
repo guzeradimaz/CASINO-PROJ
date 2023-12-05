@@ -5,7 +5,6 @@ import {HashRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./screens/Home/Home";
 import {Roulette} from "./screens/Roulette/Roulette";
 import {SlotMachine} from "./screens/SlotMachine/SlotMachine";
-import {SlotMachineSeven} from "./screens/SlotMachineSeven/SlotMachineSeven";
 import {Login} from "./screens/Login/Login";
 import {store} from './app/store'
 import {Provider} from 'react-redux'
@@ -22,8 +21,8 @@ root.render(
                     <Route path="/" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/roulette" element={<Roulette/>}/>
-                    <Route path="/slots" element={<SlotMachine/>}/>
-                    <Route path="/slotsseven" element={<SlotMachineSeven/>}/>
+                    <Route path="/slots" element={<SlotMachine item1={'7'} item2={'🍌'} item3={'🔥'} item4={'🤡'}/>}/>
+                    <Route path="/slotsseven" element={<SlotMachine item1={'😁'} item2={'🚀'} item3={'🚕'} item4={'⌛'}/>}/>
                     <Route path="/balance" element={<Balance/>}/>
                     <Route path="*" element={<NoPage/>}/>
                 </Routes>
