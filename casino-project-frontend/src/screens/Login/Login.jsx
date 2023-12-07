@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {signInWithGooglePopup} from "../../utils/firebase";
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
+import {doc, getDoc, getFirestore, setDoc} from 'firebase/firestore'
 import "./Login.css";
 import {useDispatch} from "react-redux";
 import {setUser} from "../../app/features/userSlice";
@@ -25,7 +25,8 @@ export const Login = () => {
                 email: user.email,
                 photo: user.photoURL,
                 id: user.uid,
-                balance: 1000
+                balance: 1000,
+                isAdmin: false
             }
 
             if (userDoc.exists()) {
