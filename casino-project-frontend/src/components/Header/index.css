@@ -11,8 +11,12 @@
   cursor: pointer;
 }
 
-.button-header:hover{
+.button-header:hover:enabled{
   color: rgb(85, 43, 140);
   transition: all .3s ease;
   background: #fff;
+}
+
+.button-header:disabled {
+  background-color:  gray;
 }

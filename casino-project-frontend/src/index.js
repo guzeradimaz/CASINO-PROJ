@@ -22,8 +22,8 @@ root.render(
                     <Route path="/" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/roulette" element={<Roulette/>}/>
-                    <Route path="/slots" element={<SlotMachine item1={'7'} item2={'🍌'} item3={'🔥'} item4={'🤡'}/>}/>
-                    <Route path="/slotsseven" element={<SlotMachine item1={'😁'} item2={'🚀'} item3={'🚕'} item4={'⌛'}/>}/>
+                    <Route path="/slots" element={<SlotMachine game={'slots'} item1={'7'} item2={'🍌'} item3={'🔥'} item4={'🤡'}/>}/>
+                    <Route path="/slotsseven" element={<SlotMachine game={'slots seven'} item1={'😁'} item2={'🚀'} item3={'🚕'} item4={'⌛'}/>}/>
                     <Route path="/balance" element={<Balance/>}/>
                     <Route path="/admin" element={<Admin/>}/>
                     <Route path="*" element={<NoPage/>}/>

@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeBalance} from '../../app/features/userSlice'
 import useStorageUserChecker from "../../hooks/useStorageUserChecker";
 
-export const SlotMachine = ({item1, item2, item3, item4}) => {
+export const SlotMachine = ({game, item1, item2, item3, item4}) => {
     const [spin, setSpin] = useState(false);
     const [ring1, setRing1] = useState();
     const [ring2, setRing2] = useState();
@@ -257,7 +257,7 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
                 setRing1();
                 setRing2();
                 setRing3();
-                dispatch(changeBalance(-input));
+                dispatch(changeBalance({income: -input, game}));
                 setJackpot(jackpot + input / 2);
                 setTimeout(function () {
                     rand();
@@ -271,7 +271,7 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
     function win() {
         if (ring1 <= 50 && ring2 <= 50 && ring3 <= 50 && ring1 != undefined) {
             setPrice(1);
-            dispatch(changeBalance(balance * 15));
+            dispatch(changeBalance({income: balance * 15, game}));
         } else if (
             ring1 > 50 &&
             ring1 <= 75 &&
@@ -282,7 +282,7 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
             ring1 != undefined
         ) {
             setPrice(2);
-            dispatch(changeBalance(balance * 20));
+            dispatch(changeBalance({income: balance * 20, game}));
         } else if (
             ring1 > 75 &&
             ring1 <= 95 &&
@@ -293,7 +293,7 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
             ring1 != undefined
         ) {
             setPrice(3);
-            dispatch(changeBalance(balance * 25));
+            dispatch(changeBalance({income: balance * 25, game}));
         } else if (
             ring1 > 95 &&
             ring1 <= 100 &&
@@ -304,7 +304,7 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
             ring1 != undefined
         ) {
             setPrice(4);
-            dispatch(changeBalance(jackpot));
+            dispatch(changeBalance({income: jackpot, game}));
             setJackpot(0);
         } else {
             setPrice(0);
@@ -378,7 +378,8 @@ export const SlotMachine = ({item1, item2, item3, item4}) => {
                         {"Available cash: " + Math.round(balance * 100) / 100 + "€"}
                     </h1>
                     <button
-                        onClick={() => dispatch(changeBalance(1000))}
+                        onClick={() => dispatch(changeBalance({income: 1000, game})
+                        )}
                         className="buyMoreButton"
                     >
                         Add 1000 €

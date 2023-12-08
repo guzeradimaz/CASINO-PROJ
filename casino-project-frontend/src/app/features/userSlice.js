@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
-import * as db from "@firebase/firestore";
 import {doc, getFirestore, setDoc} from "firebase/firestore";
+import {pushStatistic} from "../../utils/DB";
 
 const UserInit = {
     user: null
@@ -14,13 +14,14 @@ export const userSlice = createSlice({
             state.user = action.payload
         },
         changeBalance: (state, action) => {
-            console.log(state.user)
-
-            state.user.balance += action.payload
+            const income = action.payload.income
+            const game = action.payload.game
+            state.user.balance += income
             const id = state.user.id
             try {
                 const docRef = doc(getFirestore(), 'users', id)
                 setDoc(docRef, state.user)
+                pushStatistic(state.user, income, game)
             } catch (e) {
                 console.log(e)
             }

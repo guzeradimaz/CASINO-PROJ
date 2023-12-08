@@ -11,6 +11,8 @@ import { changeBalance } from "../../app/features/userSlice";
 import { ModalWin } from "./components/ModalWin/ModalWin";
 import useStorageUserChecker from "../../hooks/useStorageUserChecker";
 
+const game = "Roulette"
+
 const data = [
   { option: "0", style: { textColor: "#fff", backgroundColor: "#016D29" } },
   { option: "32", style: { textColor: "#fff", backgroundColor: "#E0080B" } },
@@ -130,7 +132,7 @@ export const Roulette = () => {
     }
     if (!mustSpin) {
       setDisabled(true);
-      dispatch(changeBalance(-bet));
+      dispatch(changeBalance({income: -bet, game }));
       const newPrizeNumber = Math.floor(Math.random() * data.length);
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
@@ -160,13 +162,13 @@ export const Roulette = () => {
       setIsWin({ number: isWinNumber, color: isWinColor });
       setModalVisible(!modalVisible);
       if (!isWinColor && !isWinNumber) {
-        dispatch(changeBalance(-bet));
+        dispatch(changeBalance({income: -bet, game }));
       } else if (isWinColor) {
         const num = bet * 2;
-        dispatch(changeBalance(+num));
+        dispatch(changeBalance({income: num, game }));
       } else if (isWinNumber) {
         const num = bet * 36;
-        dispatch(changeBalance(+num));
+        dispatch(changeBalance({income: num, game }));
       }
     }, 9000);
   };

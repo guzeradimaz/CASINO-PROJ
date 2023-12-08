@@ -1,27 +1,26 @@
 import './Report.css'
 import React, {useRef} from "react";
 import {addDoc, collection, doc, getFirestore} from "firebase/firestore";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {selectUser} from "../../app/features/userSlice";
 
 const Report = ({modalVisible, setModalVisible}) => {
     const handleClose = () => setModalVisible(!modalVisible);
     const textRef = useRef();
     const user = useSelector(selectUser);
-    const dispatch = useDispatch();
 
     const handleSend = async () => {
         const text = textRef.current.value
 
         const userRef = doc(getFirestore(), 'users', user.user.id)
 
-        const statistics = {
+        const report = {
             text,
             time: Date.now(),
             userRef
         }
 
-        const statisticsRef = await addDoc(collection(getFirestore(), 'statistics'), statistics);
+        await addDoc(collection(getFirestore(), 'reports'), report);
         handleClose()
     }
 
