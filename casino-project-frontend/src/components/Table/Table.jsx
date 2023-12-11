@@ -10,7 +10,7 @@ class Table extends Component {
             return null
         }
         return (
-            <>
+            <div className='table-wrapper'>
                 <div className="caption">{name}</div>
                 <table className="table">
                     <thead>
@@ -29,7 +29,7 @@ class Table extends Component {
                     ))}
                     </tbody>
                 </table>
-            </>
+            </div>
         );
     }
 }

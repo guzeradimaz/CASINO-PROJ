@@ -1,9 +1,11 @@
 .report-textarea {
     width: 80%;
     height: 50%;
+    border-radius: 10px;
     border: none;
     resize: none;
     padding: 5px;
+    outline: none;
 }
 
 .button-wrapper {

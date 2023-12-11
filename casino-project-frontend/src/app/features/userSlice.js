@@ -17,6 +17,7 @@ export const userSlice = createSlice({
             const income = action.payload.income
             const game = action.payload.game
             state.user.balance += income
+            localStorage.setItem('user', JSON.stringify(state.user))
             const id = state.user.id
             try {
                 const docRef = doc(getFirestore(), 'users', id)
@@ -25,7 +26,6 @@ export const userSlice = createSlice({
             } catch (e) {
                 console.log(e)
             }
-
         }
     }
 })
