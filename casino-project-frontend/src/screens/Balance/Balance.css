@@ -21,14 +21,19 @@
 .card-info-container {
     margin: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 150px);
     row-gap: 5px;
-    column-gap: 25px;
+    column-gap: 20px;
     grid-auto-rows: minmax(50px, auto);
 }
 
 .card-info-container label {
+    font-size: 13px;
+}
+
+.card-info-container input {
     font-size: 20px;
+    font-weight: bold;
 }
 
 .card-info-container label:nth-child(1) {

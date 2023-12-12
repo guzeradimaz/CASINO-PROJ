@@ -22,7 +22,9 @@ export const userSlice = createSlice({
             try {
                 const docRef = doc(getFirestore(), 'users', id)
                 setDoc(docRef, state.user)
-                pushStatistic(state.user, income, game)
+                if (game) {
+                    pushStatistic(state.user, income, game)
+                }
             } catch (e) {
                 console.log(e)
             }
