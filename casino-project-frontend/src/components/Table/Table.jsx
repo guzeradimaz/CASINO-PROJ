@@ -10,7 +10,7 @@ class Table extends Component {
             return null
         }
         return (
-            <div className='table-wrapper'>
+            <div className='table-wrapper' style={{backgroundColor: 'rgb(17,17,17)'}}>
                 <div className="caption">{name}</div>
                 <table className="table">
                     <thead>
